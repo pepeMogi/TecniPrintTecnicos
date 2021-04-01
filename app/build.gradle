@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "co.tecniprint.tecniprinttecnicos"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', '-keep class androidx.appcompat.widget.** { *; }'
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // libreria firebase
+    implementation platform('com.google.firebase:firebase-bom:26.4.0')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-messaging'
+    // firebase ui
+    implementation 'com.firebaseui:firebase-ui-firestore:7.1.1'
+    // para dim dinamico
+    implementation 'com.github.MrNouri:DynamicSizes:1.0'
+    // manejo de imagenes
+    implementation 'com.github.CanHub:Android-Image-Cropper:2.2.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.google.firebase:firebase-storage'
+    // zoom
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    // para elejir ubicacion
+    implementation 'com.github.TutorialsAndroid:FilePicker:v8.0.19'
+
+    // motor de busqueda
+    implementation 'com.algolia:algoliasearch-android:3.27.0'
+    // links Dinamicos
+    implementation 'com.google.firebase:firebase-dynamic-links:19.0.0'
+    //justificar el textview
+    implementation 'com.codesgood:justifiedtextview:1.1.0'
+
+    implementation 'com.android.volley:volley:1.0.0'
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android.material:material:1.4.0-alpha01'
+}

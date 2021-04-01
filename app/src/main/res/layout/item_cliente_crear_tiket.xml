@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_240mdp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_8mdp"
+    android:layout_marginEnd="@dimen/_8mdp"
+    android:layout_marginTop="@dimen/_2mdp"
+    android:layout_marginBottom="@dimen/_12mdp"
+    app:cardCornerRadius="18dp"
+    app:cardBackgroundColor="@color/colorBlanco"
+    app:cardElevation="8dp">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8mdp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="@dimen/_60mdp"
+                android:layout_height="@dimen/_60mdp"
+                android:layout_margin="@dimen/_5mdp"
+                app:cardCornerRadius="@dimen/_29mdp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_it_cli"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginStart="@dimen/_8mdp"
+                android:layout_marginTop="@dimen/_4mdp"
+                app:layout_constraintStart_toEndOf="@+id/cardView6"
+                app:layout_constraintTop_toTopOf="@+id/cardView6"
+                app:srcCompat="@drawable/ic_persona" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView6"
+                app:layout_constraintStart_toStartOf="@+id/cardView6"
+                app:layout_constraintTop_toBottomOf="@+id/cardView6"
+                app:srcCompat="@drawable/ic_direccion" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="@dimen/_16mdp"
+                android:layout_height="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_4mdp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                app:layout_constraintStart_toStartOf="@+id/imageView6"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6"
+                app:srcCompat="@drawable/ic_tipo" />
+
+            <TextView
+                android:id="@+id/txt_nom_it_cli"
+                android:layout_width="@dimen/_114mdp"
+                android:layout_height="wrap_content"
+                android:text="Nombre: "
+                android:textSize="16sp"
+                android:layout_marginStart="@dimen/_8mdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+            <TextView
+                android:id="@+id/txt_cc_it_cli"
+                android:layout_width="@dimen/_114mdp"
+                android:layout_height="wrap_content"
+                android:text="Cc "
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintStart_toStartOf="@+id/txt_nom_it_cli"
+                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+            <TextView
+                android:id="@+id/txt_dir_it_cli"
+                android:layout_width="@dimen/_150mdp"
+                android:layout_height="wrap_content"
+                android:text="Direccion: "
+                android:textSize="16sp"
+                android:layout_marginStart="@dimen/_8mdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

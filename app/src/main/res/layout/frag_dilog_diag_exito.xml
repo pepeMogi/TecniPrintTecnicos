@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_tit_pros_diag"
+        android:layout_width="@dimen/_250mdp"
+        android:layout_height="wrap_content"
+        android:text="Procesando Diagnostico"
+        android:textColor="@color/colorNegro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_20mdp"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:layout_marginEnd="@dimen/_16mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prb_img_pros_diag"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tit_pros_diag" />
+
+    <TextView
+        android:id="@+id/txt_pros_imgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subiendo imagnes"
+        android:layout_marginStart="@dimen/_12mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_img_pros_diag"
+        app:layout_constraintStart_toEndOf="@+id/prb_img_pros_diag"
+        app:layout_constraintTop_toTopOf="@+id/prb_img_pros_diag" />
+
+
+    <ProgressBar
+        android:id="@+id/prb_sub_pros_diag"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag"
+        app:layout_constraintTop_toBottomOf="@+id/prb_img_pros_diag" />
+
+    <TextView
+        android:id="@+id/txt_pros_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subiendo diagnostico"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_sub_pros_diag"
+        app:layout_constraintStart_toStartOf="@+id/txt_pros_imgs"
+        app:layout_constraintTop_toTopOf="@+id/prb_sub_pros_diag" />
+
+    <ProgressBar
+        android:id="@+id/prb_act_pros_diag"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag"
+        app:layout_constraintTop_toBottomOf="@+id/prb_sub_pros_diag" />
+
+    <TextView
+        android:id="@+id/txt_act_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizando informacion en tiket"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_act_pros_diag"
+        app:layout_constraintStart_toStartOf="@+id/txt_pros_imgs"
+        app:layout_constraintTop_toTopOf="@+id/prb_act_pros_diag" />
+
+    <ProgressBar
+        android:id="@+id/prb_not_pros_diag"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag"
+        app:layout_constraintTop_toBottomOf="@+id/prb_act_pros_diag" />
+
+    <TextView
+        android:id="@+id/txt_not_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notificando a torre de control"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_not_pros_diag"
+        app:layout_constraintStart_toStartOf="@+id/txt_pros_imgs"
+        app:layout_constraintTop_toTopOf="@+id/prb_not_pros_diag" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crv_btn_terminar"
+        android:layout_width="@dimen/_130mdp"
+        android:layout_height="@dimen/_30mdp"
+        android:layout_marginTop="@dimen/_30mdp"
+        android:layout_marginBottom="@dimen/_30mdp"
+        android:visibility="invisible"
+        android:padding="@dimen/_4mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/txt_tit_pros_diag"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag"
+        app:layout_constraintTop_toBottomOf="@+id/prb_not_pros_diag">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Terminar"
+            android:textColor="@color/colorBlanco"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crv_btn_terminar_act"
+        android:layout_width="@dimen/_150mdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30mdp"
+        android:layout_marginStart="@dimen/_12mdp"
+        android:layout_marginEnd="@dimen/_12mdp"
+        android:layout_marginBottom="@dimen/_30mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/txt_tit_pros_diag"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag"
+        app:layout_constraintTop_toBottomOf="@+id/prb_not_pros_diag">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="@dimen/_4mdp"
+            android:text="Actualizar Datos Cliente Y Terminar"
+            android:textColor="@color/colorBlanco"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crv_btn_compartir"
+        android:layout_width="@dimen/_130mdp"
+        android:layout_height="@dimen/_30mdp"
+        android:layout_marginTop="@dimen/_32mdp"
+        android:layout_marginBottom="@dimen/_32mdp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/crv_btn_terminar"
+        app:layout_constraintEnd_toEndOf="@+id/txt_tit_pros_diag"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag"
+        app:layout_constraintTop_toBottomOf="@+id/prb_not_pros_diag">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Compartir"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlanco"
+            android:textSize="18sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

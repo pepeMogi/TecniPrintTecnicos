@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetalleTiket"
+    android:background="@color/colorBlanco">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlanco"
+
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_det_tik_atras"
+                        android:layout_width="@dimen/_25mdp"
+                        android:layout_height="@dimen/_18mdp"
+                        android:layout_marginStart="@dimen/_10mdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_atras" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Detalle de tiket"
+                        android:textColor="@color/colorBlanco"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_det_tik_atras"
+                        app:layout_constraintEnd_toStartOf="@+id/crv_btn_det_tik_ges"
+                        app:layout_constraintHorizontal_bias="0.378"
+                        app:layout_constraintStart_toEndOf="@+id/img_det_tik_atras"
+                        app:layout_constraintTop_toTopOf="@+id/img_det_tik_atras" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crv_btn_det_tik_ges"
+                        android:layout_width="@dimen/_80mdp"
+                        android:layout_height="@dimen/_28mdp"
+                        android:layout_marginEnd="@dimen/_12mdp"
+                        app:cardBackgroundColor="@color/colorBlanco"
+                        app:cardCornerRadius="17dp"
+                        app:cardElevation="6dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Gestionar"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_det_prio"
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginStart="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_18mdp"
+                app:cardBackgroundColor="@color/colorGrisOscuro"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+            <TextView
+                android:id="@+id/txt_det_pri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8mdp"
+                android:text="Prioridad"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+
+                app:layout_constraintBottom_toBottomOf="@+id/crv_det_prio"
+                app:layout_constraintStart_toEndOf="@+id/crv_det_prio"
+                app:layout_constraintTop_toTopOf="@+id/crv_det_prio" />
+
+
+            <ImageView
+                android:id="@+id/img_det_tik_tip"
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginStart="@dimen/_12mdp"
+                app:layout_constraintBottom_toBottomOf="@+id/crv_det_prio"
+                app:layout_constraintStart_toEndOf="@+id/txt_det_pri"
+                app:layout_constraintTop_toTopOf="@+id/crv_det_prio"
+                app:srcCompat="@drawable/ic_tipo" />
+
+            <TextView
+                android:id="@+id/txt_det_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8mdp"
+                android:text="Tipo"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_det_tik_tip"
+                app:layout_constraintStart_toEndOf="@+id/img_det_tik_tip"
+                app:layout_constraintTop_toTopOf="@+id/img_det_tik_tip" />
+
+            <TextView
+                android:id="@+id/txt_det_est"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado"
+                android:textColor="@color/colorNegro"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/txt_det_num"
+                app:layout_constraintTop_toBottomOf="@+id/txt_det_num" />
+
+
+            <TextView
+                android:id="@+id/txt_det_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16mdp"
+                android:text="Numero"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/crv_det_prio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/crv_det_prio" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre: "
+                android:layout_marginTop="@dimen/_24mdp"
+                android:layout_marginStart="@dimen/_4mdp"
+                android:textColor="@color/colorNegro"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/crv_det_prio"
+                app:layout_constraintTop_toBottomOf="@+id/crv_det_prio" />
+
+            <TextView
+                android:id="@+id/txt_det_nom"
+                android:layout_width="@dimen/_210mdp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Nombre"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:layout_marginStart="@dimen/_4mdp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/img_it_maq"
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginTop="@dimen/_24mdp"
+                app:layout_constraintStart_toStartOf="@+id/crv_det_prio"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:srcCompat="@drawable/ic_maquina" />
+
+            <TextView
+                android:id="@+id/txt_det_maq"
+                android:layout_width="@dimen/_220mdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16mdp"
+                android:text="Maquinas"
+                android:textColor="@color/colorGrisOscuro"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_it_maq"
+                app:layout_constraintStart_toEndOf="@+id/img_it_maq"
+                app:layout_constraintTop_toTopOf="@+id/img_it_maq" />
+
+
+            <ImageView
+                android:id="@+id/img_it_fall"
+                android:layout_width="@dimen/_17mdp"
+                android:layout_height="@dimen/_17mdp"
+                app:layout_constraintEnd_toEndOf="@+id/img_it_maq"
+                app:layout_constraintStart_toStartOf="@+id/img_it_maq"
+                app:layout_constraintTop_toTopOf="@+id/txt_det_des_fallo"
+                app:srcCompat="@drawable/ic_fallo" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:id="@+id/txt_det_des_fallo"
+                android:layout_width="@dimen/_220mdp"
+                android:layout_height="wrap_content"
+                android:text="Descripcion del Fallo"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:textColor="@color/colorNegro"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_det_maq"
+                app:layout_constraintTop_toBottomOf="@+id/rcv_det_ane" />
+
+
+            <TextView
+                android:id="@+id/txt_ane_diag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anexos"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_12mdp"
+                app:layout_constraintStart_toStartOf="@+id/img_it_maq"
+                app:layout_constraintTop_toBottomOf="@+id/txt_det_maq" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_det_ane"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:layout_height="@dimen/_130mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_ane_diag" />
+
+            <TextView
+                android:id="@+id/txt_no_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ninguna Imagen Anexada"
+                android:textColor="@color/colorGris"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/txt_det_des_fallo"
+                app:layout_constraintEnd_toEndOf="@+id/rcv_det_ane"
+                app:layout_constraintStart_toStartOf="@+id/rcv_det_ane"
+                app:layout_constraintTop_toTopOf="@+id/rcv_det_ane" />
+
+
+            <ImageView
+                android:id="@+id/img_it_dir"
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginTop="@dimen/_24mdp"
+                app:layout_constraintEnd_toEndOf="@+id/img_it_maq"
+                app:layout_constraintStart_toStartOf="@+id/img_it_maq"
+                app:layout_constraintTop_toBottomOf="@+id/txt_det_des_fallo"
+                app:srcCompat="@drawable/ic_direccion" />
+
+            <TextView
+                android:id="@+id/txt_det_dir"
+                android:layout_width="@dimen/_220mdp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Calle"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_det_des_fallo"
+                app:layout_constraintTop_toTopOf="@+id/img_it_dir" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_det_cel_uno"
+                android:layout_width="@dimen/_120mdp"
+                android:layout_height="@dimen/_30mdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="18dp"
+                android:layout_marginTop="@dimen/_32mdp"
+                android:layout_marginStart="@dimen/_18mdp"
+                app:cardElevation="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_det_dir">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_16mdp"
+                        android:layout_height="@dimen/_16mdp"
+                        android:layout_marginTop="@dimen/_1mdp"
+                        app:srcCompat="@drawable/ic_telefono" />
+
+                    <TextView
+                        android:id="@+id/txt_crd_cel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6mdp"
+                        android:text="3152465484"
+                        android:textColor="@color/colorBlanco"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_det_cel_dos"
+                android:layout_width="@dimen/_120mdp"
+                android:layout_height="@dimen/_30mdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="@dimen/_18mdp"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/crv_det_cel_uno">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_16mdp"
+                        android:layout_height="@dimen/_16mdp"
+                        android:layout_marginTop="@dimen/_1mdp"
+                        app:srcCompat="@drawable/ic_telefono" />
+
+                    <TextView
+                        android:id="@+id/txt_crd_cel_dos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6mdp"
+                        android:text="7739585"
+                        android:textColor="@color/colorBlanco"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <ImageView
+                android:id="@+id/img_it_tec_asi"
+                android:layout_width="@dimen/_26mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginTop="@dimen/_32mdp"
+                android:layout_marginStart="@dimen/_4mdp"
+                app:layout_constraintStart_toStartOf="@+id/img_it_maq"
+                app:layout_constraintTop_toBottomOf="@+id/crv_det_cel_uno"
+                app:srcCompat="@drawable/ic_tecnico" />
+
+
+            <TextView
+                android:id="@+id/txt_det_asi"
+                android:layout_width="@dimen/_172mdp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Tecnico Asignado"
+                android:textColor="@color/colorNegro"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_det_maq"
+                app:layout_constraintTop_toTopOf="@+id/img_it_tec_asi" />
+
+
+            <ImageView
+                android:id="@+id/img_it_dia"
+                android:layout_width="@dimen/_18mdp"
+                android:layout_height="@dimen/_18mdp"
+                android:layout_marginStart="@dimen/_2mdp"
+                android:layout_marginTop="@dimen/_24mdp"
+                app:layout_constraintStart_toStartOf="@+id/crv_det_prio"
+                app:layout_constraintTop_toBottomOf="@+id/txt_det_asi"
+                app:srcCompat="@drawable/ic_alert" />
+
+
+            <TextView
+                android:id="@+id/txt_det_sin_diag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sin Diagnostico"
+                android:textColor="@color/colorGris"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_it_dia"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rcv_det_diag"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txt_det_vis"
+                android:layout_width="@dimen/_160mdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:text="Ultima Visita"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/txt_det_diag"
+                app:layout_constraintTop_toTopOf="@+id/txt_det_diag" />
+
+            <TextView
+                android:id="@+id/txt_det_diag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnostico"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_it_dia"
+                app:layout_constraintStart_toStartOf="@+id/txt_det_maq"
+                app:layout_constraintTop_toTopOf="@+id/img_it_dia"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_det_diag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:paddingBottom="@dimen/_32mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_it_dia" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

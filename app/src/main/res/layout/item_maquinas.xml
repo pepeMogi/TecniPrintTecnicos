@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_240mdp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/colorNegro"
+    android:layout_margin="@dimen/_8mdp"
+    app:cardCornerRadius="18dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_12mdp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView24"
+            android:layout_width="@dimen/_70mdp"
+            android:layout_height="@dimen/_70mdp"
+            app:cardCornerRadius="42dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_it_maq"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/txt_it_maq"
+            android:layout_width="@dimen/_120mdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4mdp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="@+id/txt_it_maq_tipo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_it_maq_tipo" />
+
+        <TextView
+            android:id="@+id/txt_it_maq_tipo"
+            android:layout_width="@dimen/_120mdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12mdp"
+            android:maxLines="1"
+            android:textColor="@color/colorBlanco"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView24"
+            app:layout_constraintStart_toEndOf="@+id/cardView24"
+            app:layout_constraintTop_toTopOf="@+id/cardView24"
+            app:layout_constraintVertical_bias="0.110000014" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

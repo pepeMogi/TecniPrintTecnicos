@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_270mdp"
+    android:layout_height="@dimen/_180mdp"
+    android:layout_margin="@dimen/_4mdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_8mdp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView11"
+            android:layout_width="@dimen/_50mdp"
+            android:layout_height="@dimen/_50mdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_maq_con"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_tip_con"
+            android:layout_width="@dimen/_180mdp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Tipo"
+            android:layout_marginStart="@dimen/_8mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView11"
+            app:layout_constraintStart_toEndOf="@+id/cardView11"
+            app:layout_constraintTop_toTopOf="@+id/cardView11" />
+
+
+        <TextView
+            android:id="@+id/txt_id_con"
+            android:layout_width="@dimen/_180mdp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Id maquina"
+            app:layout_constraintStart_toStartOf="@+id/txt_tip_con"
+            app:layout_constraintTop_toBottomOf="@+id/txt_tip_con" />
+
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/cardView9"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35mdp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_marginTop="@dimen/_18mdp"
+            android:layout_marginStart="@dimen/_20mdp"
+            android:layout_marginEnd="@dimen/_20mdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView11">
+
+
+            <EditText
+                android:id="@+id/edt_bn_con"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_6mdp"
+                android:layout_marginEnd="@dimen/_6mdp"
+                android:backgroundTint="@color/colorTransparente"
+                android:hint="Contador Bn"
+                android:inputType="textVisiblePassword"
+                android:singleLine="true" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35mdp"
+            android:layout_marginStart="@dimen/_20mdp"
+            android:layout_marginEnd="@dimen/_20mdp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_marginTop="@dimen/_18mdp"
+            app:layout_constraintEnd_toEndOf="@+id/img_log"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView9">
+
+
+            <EditText
+                android:id="@+id/edt_col_con"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_6mdp"
+                android:layout_marginEnd="@dimen/_6mdp"
+                android:backgroundTint="@color/colorTransparente"
+                android:hint="Contador Color"
+                android:inputType="textVisiblePassword"
+                android:singleLine="true" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

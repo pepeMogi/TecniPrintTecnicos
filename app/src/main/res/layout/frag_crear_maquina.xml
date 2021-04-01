@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearMaquina">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_8mdp"
+        app:cardCornerRadius="16dp"
+        >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_14mdp">
+
+
+            <ImageView
+                android:id="@+id/img_it_tipo"
+                android:layout_width="@dimen/_22mdp"
+                android:layout_height="@dimen/_22mdp"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:layout_marginStart="@dimen/_4mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_tipo" />
+
+            <TextView
+                android:id="@+id/txt_det_maq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16mdp"
+                android:text="Referencia"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_it_tipo"
+                app:layout_constraintStart_toEndOf="@+id/img_it_tipo"
+                app:layout_constraintTop_toTopOf="@+id/img_it_tipo" />
+
+
+            <TextView
+                android:id="@+id/txt_ref_cre_maq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:text="Referencia"
+                android:textColor="@color/colorNegro"
+                android:textSize="16sp"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginEnd="@dimen/_12mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_it_tipo" />
+
+            <Spinner
+                android:id="@+id/spn"
+                android:layout_width="@dimen/_150mdp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/_18mdp"
+                android:layout_marginStart="@dimen/_4mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_ref_cre_maq">
+
+
+            </Spinner>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="@dimen/_120mdp"
+                android:layout_height="@dimen/_35mdp"
+                android:layout_marginTop="@dimen/_18mdp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginStart="@dimen/_2mdp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/img_log"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spn">
+
+                <AutoCompleteTextView
+                    android:id="@+id/aut_mar_cre_maq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_4mdp"
+                    android:layout_marginEnd="@dimen/_4mdp"
+                    android:backgroundTint="@color/colorTransparente"
+                    android:hint="Marca"
+                    android:inputType="textCapCharacters"
+                    app:layout_constraintStart_toStartOf="@+id/spn"
+                    app:layout_constraintTop_toBottomOf="@+id/spn" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="@dimen/_120mdp"
+                android:layout_height="@dimen/_35mdp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:layout_marginEnd="@dimen/_2mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardView">
+
+                <AutoCompleteTextView
+                    android:id="@+id/aut_mod_cre_maq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_4mdp"
+                    android:layout_marginEnd="@dimen/_4mdp"
+                    android:backgroundTint="@color/colorTransparente"
+                    android:hint="Modelo"
+                    android:inputType="textVisiblePassword"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spn" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35mdp"
+                android:layout_marginTop="@dimen/_24mdp"
+                android:paddingStart="@dimen/_4mdp"
+                android:layout_marginStart="@dimen/_8mdp"
+                android:layout_marginEnd="@dimen/_8mdp"
+                android:paddingEnd="@dimen/_4mdp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+                <EditText
+                    android:id="@+id/edt_num_cre_maq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_4mdp"
+                    android:layout_marginEnd="@dimen/_4mdp"
+                    android:backgroundTint="@color/colorTransparente"
+                    android:hint="Numero de serie"
+                    android:inputType="textVisiblePassword" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="@dimen/_120mdp"
+                android:layout_height="@dimen/_35mdp"
+                android:layout_marginStart="@dimen/_2mdp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:layout_marginTop="@dimen/_24mdp"
+                app:layout_constraintEnd_toEndOf="@+id/img_log"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                <EditText
+                    android:id="@+id/edt_con_bn_cre_maq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_4mdp"
+                    android:layout_marginEnd="@dimen/_4mdp"
+                    android:backgroundTint="@color/colorTransparente"
+                    android:hint="Contador BN"
+                    android:inputType="number"
+                    app:layout_constraintStart_toStartOf="@+id/spn"
+                    app:layout_constraintTop_toBottomOf="@+id/spn" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView10"
+                android:layout_width="@dimen/_120mdp"
+                android:layout_height="@dimen/_35mdp"
+                android:layout_marginEnd="@dimen/_2mdp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardView4">
+
+                <EditText
+                    android:id="@+id/edt_con_col_cre_maq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_4mdp"
+                    android:layout_marginEnd="@dimen/_4mdp"
+                    android:backgroundTint="@color/colorTransparente"
+                    android:hint="Contador Color"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spn" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_btn_esc_img_cre_maq"
+                android:layout_width="@dimen/_150mdp"
+                android:layout_height="@dimen/_35mdp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="@dimen/_24mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Cargar Imagen"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="@dimen/_200mdp"
+                android:layout_height="@dimen/_198mdp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="@dimen/_42mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+
+                <ImageView
+                    android:id="@+id/img_cre_maq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_addimg" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txt_img"
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView5"
+                app:layout_constraintEnd_toEndOf="@+id/cardView5"
+                app:layout_constraintStart_toStartOf="@+id/cardView5" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_btn_cre_cre_maq"
+                android:layout_width="@dimen/_200mdp"
+                android:layout_height="@dimen/_35mdp"
+                android:layout_marginBottom="@dimen/_32mdp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="@dimen/_42mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crv_btn_esc_img_cre_maq">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="CREAR MAQUINA"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

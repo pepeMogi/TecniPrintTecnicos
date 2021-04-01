@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "560524079695",
+    "project_id": "ptecni",
+    "storage_bucket": "ptecni.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560524079695:android:22b9279eba98a3787db03a",
+        "android_client_info": {
+          "package_name": "co.tecniprint.tecniprinttecnicos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560524079695-i1rnbk3p05ole9m5cr4rouhhhb5hsofd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.tecniprint.tecniprinttecnicos",
+            "certificate_hash": "659bdcb214720f559fead4dd9cb9c0e757a7005d"
+          }
+        },
+        {
+          "client_id": "560524079695-btt1n3spgr8e1thhadttit54msmrh8ik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClrSf6SEqwPCkkGSgdhXAFBpyRr_31oP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560524079695-btt1n3spgr8e1thhadttit54msmrh8ik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

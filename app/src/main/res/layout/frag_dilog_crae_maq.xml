@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_tit_pros_diag_maq"
+        android:layout_width="@dimen/_250mdp"
+        android:layout_height="wrap_content"
+        android:text="Creando Maquina"
+        android:textColor="@color/colorNegro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_20mdp"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:layout_marginEnd="@dimen/_16mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prb_img_pros_diag_maq"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag_maq"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tit_pros_diag_maq" />
+
+    <TextView
+        android:id="@+id/txt_pros_imgs_maq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subiendo imagen"
+        android:layout_marginStart="@dimen/_12mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_img_pros_diag_maq"
+        app:layout_constraintStart_toEndOf="@+id/prb_img_pros_diag_maq"
+        app:layout_constraintTop_toTopOf="@+id/prb_img_pros_diag_maq" />
+
+
+    <ProgressBar
+        android:id="@+id/prb_sub_pros_diag_maq"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag_maq"
+        app:layout_constraintTop_toBottomOf="@+id/prb_img_pros_diag_maq" />
+
+    <TextView
+        android:id="@+id/txt_pros_sub_maq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subiendo Datos de Maquina"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_sub_pros_diag_maq"
+        app:layout_constraintStart_toStartOf="@+id/txt_pros_imgs_maq"
+        app:layout_constraintTop_toTopOf="@+id/prb_sub_pros_diag_maq" />
+
+    <ProgressBar
+        android:id="@+id/prb_act_pros_diag_maq"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag_maq"
+        app:layout_constraintTop_toBottomOf="@+id/prb_sub_pros_diag_maq" />
+
+    <TextView
+        android:id="@+id/txt_act_sub_maq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizando informacion de Tiket"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_act_pros_diag_maq"
+        app:layout_constraintStart_toStartOf="@+id/txt_pros_imgs_maq"
+        app:layout_constraintTop_toTopOf="@+id/prb_act_pros_diag_maq" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crv_btn_terminar_maq"
+        android:layout_width="@dimen/_130mdp"
+        android:layout_height="@dimen/_30mdp"
+        android:layout_marginBottom="@dimen/_30mdp"
+        android:layout_marginTop="@dimen/_30mdp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_tit_pros_diag_maq"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag_maq"
+        app:layout_constraintTop_toBottomOf="@+id/txt_act_sub_maq">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Terminar"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlanco"
+            android:textSize="18sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

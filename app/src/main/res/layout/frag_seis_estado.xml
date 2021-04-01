@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_btn_legalizar"
+                android:layout_width="@dimen/_230mdp"
+                android:layout_height="@dimen/_35mdp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="@dimen/_45mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardBackgroundColor="@color/colorBlanco"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Para Legalizar"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorNegro"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_edt_nit"
+                android:layout_width="@dimen/_230mdp"
+                android:layout_height="@dimen/_35mdp"
+                android:layout_marginTop="@dimen/_12mdp"
+                app:cardBackgroundColor="@color/colorBlanco"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crv_btn_legalizar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_8mdp"
+                    android:paddingEnd="@dimen/_8mdp"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_28mdp"
+                        android:layout_height="@dimen/_24mdp"
+                        app:srcCompat="@drawable/ic_nit"
+                        android:layout_marginStart="@dimen/_4mdp"
+                        android:layout_marginEnd="@dimen/_6mdp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/edt_nit_dia"
+                        android:layout_width="@dimen/_146mdp"
+                        android:layout_height="wrap_content"
+                        android:hint="Cc - Nit"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="@dimen/_4mdp"
+                        android:inputType="textVisiblePassword"
+                        android:drawablePadding="@dimen/_8mdp"
+                        android:backgroundTint="@color/colorGris"
+                       />
+
+                    <ImageView
+                        android:id="@+id/img_btn_sig_leg"
+                        android:layout_width="@dimen/_24mdp"
+                        android:layout_height="@dimen/_18mdp"
+                        app:srcCompat="@drawable/ic_next"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_rut_img"
+                android:layout_width="@dimen/_100mdp"
+                android:layout_height="@dimen/_120mdp"
+                android:layout_marginTop="@dimen/_12mdp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="15dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crv_edt_nit">
+
+                <ImageView
+                    android:id="@+id/img_rut"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/prb_rut"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:elevation="24dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/crv_rut_img"
+                app:layout_constraintEnd_toEndOf="@+id/crv_rut_img"
+                app:layout_constraintStart_toStartOf="@+id/crv_rut_img"
+                app:layout_constraintTop_toTopOf="@+id/crv_rut_img" />
+
+            <TextView
+                android:id="@+id/txt_rut"
+                android:layout_width="@dimen/_100mdp"
+                android:layout_height="1dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/crv_rut_img"
+                app:layout_constraintEnd_toEndOf="@+id/crv_rut_img"
+                app:layout_constraintStart_toStartOf="@+id/crv_rut_img" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_btn_espera"
+                android:layout_width="@dimen/_230mdp"
+                android:layout_height="@dimen/_35mdp"
+                android:layout_marginTop="@dimen/_32mdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorBlanco"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crv_rut_img">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="En Espera de Repuesto"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_btn_re_asignar"
+                android:layout_width="@dimen/_230mdp"
+                android:layout_height="@dimen/_35mdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorBlanco"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="@dimen/_24mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crv_btn_espera">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Reasignar"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_btn_pausa"
+                android:layout_width="@dimen/_230mdp"
+                android:layout_height="@dimen/_35mdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorBlanco"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="@dimen/_24mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crv_btn_re_asignar">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="En Pausa"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:visibility="invisible"
+                android:id="@+id/crv_btn_cuatro_sig"
+                android:layout_width="@dimen/_110mdp"
+                android:layout_height="@dimen/_32mdp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="18dp"
+                android:layout_marginEnd="@dimen/_12mdp"
+                app:cardElevation="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/crv_btn_cuatro_atr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/crv_btn_cuatro_atr">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_1mdp"
+                    android:gravity="center"
+                    android:text="Siguiente"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="18sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crv_btn_cuatro_atr"
+                android:layout_width="@dimen/_120mdp"
+                android:layout_height="@dimen/_32mdp"
+                android:layout_marginBottom="@dimen/_12mdp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="18dp"
+                android:layout_marginTop="@dimen/_64mdp"
+                android:layout_marginStart="@dimen/_12mdp"
+                app:cardElevation="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crv_btn_pausa">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_1mdp"
+                    android:gravity="center"
+                    android:text="ATRAS"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="16sp"  />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

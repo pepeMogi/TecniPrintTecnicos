@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_250mdp"
+    android:layout_marginBottom="@dimen/_6mdp"
+    app:cardElevation="0dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_it_tipo"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="wrap_content"
+            android:text="facturable"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_it_pro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_it_pro" />
+
+        <TextView
+            android:id="@+id/txt_it_ref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="referencia"
+            android:textColor="@color/colorGrisOscuro"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_4mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_it_pro"
+            app:layout_constraintStart_toEndOf="@+id/txt_it_tipo"
+            app:layout_constraintTop_toTopOf="@+id/img_it_pro" />
+
+        <TextView
+            android:id="@+id/txt_it_nom"
+            android:layout_width="@dimen/_110mdp"
+            android:layout_height="wrap_content"
+            android:text="nombre"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/colorGrisOscuro"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_it_pro"
+            app:layout_constraintEnd_toStartOf="@+id/txt_it_can"
+            app:layout_constraintStart_toEndOf="@+id/txt_it_ref"
+            app:layout_constraintTop_toTopOf="@+id/img_it_pro" />
+
+
+        <TextView
+            android:id="@+id/txt_it_can"
+            android:layout_width="@dimen/_20mdp"
+            android:layout_height="wrap_content"
+            android:text="can"
+            android:textColor="@color/colorGrisOscuro"
+            android:textSize="14sp"
+            android:layout_marginEnd="@dimen/_4mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_it_pro"
+            app:layout_constraintEnd_toStartOf="@+id/img_it_pro"
+            app:layout_constraintTop_toTopOf="@+id/img_it_pro" />
+
+        <ImageView
+            android:id="@+id/img_it_pro"
+            android:layout_width="@dimen/_20mdp"
+            android:layout_height="@dimen/_20mdp"
+            app:srcCompat="@drawable/ic_borrar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_8mdp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="@dimen/_12mdp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_42mdp"
+                    android:text="Tiket creado con exito"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView7"
+                    android:layout_width="@dimen/_250mdp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    android:layout_marginTop="@dimen/_16mdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_10mdp">
+
+                        <TextView
+                            android:id="@+id/txt_id_tik_crea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_17mdp"
+                            android:text="ID tiket"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_4mdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView10"
+                            android:layout_width="@dimen/_20mdp"
+                            android:layout_height="@dimen/_20mdp"
+                            android:layout_marginStart="@dimen/_12mdp"
+                            android:layout_marginTop="@dimen/_12mdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_id_tik_crea"
+                            app:srcCompat="@drawable/ic_persona" />
+
+                        <TextView
+                            android:id="@+id/txt_nom_tik_crea"
+                            android:layout_width="@dimen/_160mdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12mdp"
+                            android:text="Cliente/Solicitante"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                            app:layout_constraintStart_toEndOf="@+id/imageView10"
+                            app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="@dimen/_20mdp"
+                            android:layout_height="@dimen/_20mdp"
+                            android:layout_marginTop="@dimen/_12mdp"
+                            app:layout_constraintStart_toStartOf="@+id/imageView10"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView10"
+                            app:srcCompat="@drawable/ic_direccion" />
+
+                        <TextView
+                            android:id="@+id/txt_dir_tik_crea"
+                            android:layout_width="@dimen/_160mdp"
+                            android:layout_height="wrap_content"
+                            android:text="Direccion"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                            app:layout_constraintStart_toStartOf="@+id/txt_nom_tik_crea"
+                            app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+                        <ImageView
+                            android:id="@+id/imageView9"
+                            android:layout_width="23dp"
+                            android:layout_height="28dp"
+                            android:layout_marginTop="@dimen/_12mdp"
+                            android:layout_marginBottom="@dimen/_12mdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/imageView8"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView8"
+                            app:srcCompat="@drawable/ic_maquina" />
+
+                        <TextView
+                            android:id="@+id/txt_maq_tik_crea"
+                            android:layout_width="@dimen/_160mdp"
+                            android:layout_height="wrap_content"
+                            android:text="Maquina"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                            app:layout_constraintStart_toStartOf="@+id/txt_nom_tik_crea"
+                            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crv_btn_com_cinco"
+                    android:layout_width="@dimen/_170mdp"
+                    android:layout_height="@dimen/_35mdp"
+                    android:layout_marginTop="@dimen/_42mdp"
+                    android:foregroundGravity="center"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView7">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Compartir"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlanco"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crv_btn_com_cinco_ter"
+                    android:layout_width="@dimen/_170mdp"
+                    android:layout_height="@dimen/_35mdp"
+                    android:layout_marginBottom="@dimen/_32mdp"
+                    android:foregroundGravity="center"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginTop="@dimen/_32mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/crv_btn_com_cinco">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Terminar"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlanco"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

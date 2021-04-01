@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_12mdp"
+    android:layout_marginEnd="@dimen/_12mdp"
+    android:layout_marginTop="@dimen/_20mdp"
+    android:layout_marginBottom="@dimen/_4mdp"
+    app:cardCornerRadius="14dp"
+    android:layout_gravity="center"
+    android:foregroundGravity="center"
+    app:cardElevation="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crv_it_pri"
+            android:layout_width="@dimen/_20mdp"
+            android:layout_height="@dimen/_20mdp"
+            android:layout_marginStart="@dimen/_12mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txt_crd_pri"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6mdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Urgente"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/crv_it_pri"
+            app:layout_constraintStart_toEndOf="@+id/crv_it_pri"
+            app:layout_constraintTop_toTopOf="@+id/crv_it_pri" />
+
+        <ImageView
+            android:id="@+id/img_it_tip"
+            android:layout_width="@dimen/_20mdp"
+            android:layout_height="@dimen/_20mdp"
+            android:layout_marginStart="@dimen/_12mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/crv_it_pri"
+            app:layout_constraintStart_toEndOf="@+id/txt_crd_pri"
+            app:layout_constraintTop_toTopOf="@+id/crv_it_pri"
+            app:srcCompat="@drawable/ic_tipo" />
+
+        <TextView
+            android:id="@+id/txt_crd_tipo"
+            android:layout_width="@dimen/_70mdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4mdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Tipo"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_it_tip"
+            app:layout_constraintStart_toEndOf="@+id/img_it_tip"
+            app:layout_constraintTop_toTopOf="@+id/img_it_tip" />
+
+
+        <TextView
+            android:id="@+id/txt_crd_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12mdp"
+            android:text="Numero"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/crv_it_pri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/crv_it_pri" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8mdp"
+            android:layout_marginTop="@dimen/_12mdp"
+            android:text="Nombre: "
+            android:textColor="@color/colorNegro"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/crv_it_pri"
+            app:layout_constraintTop_toBottomOf="@+id/crv_it_pri" />
+
+
+         <TextView
+             android:id="@+id/txt_crd_nom"
+             android:layout_width="@dimen/_160mdp"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="@dimen/_4mdp"
+             android:ellipsize="end"
+             android:maxLines="3"
+             android:text="Nom"
+             android:textColor="@color/colorAccent"
+             android:textSize="16sp"
+             app:layout_constraintStart_toEndOf="@+id/textView3"
+             app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+         <ImageView
+             android:id="@+id/img_it_maq"
+             android:layout_width="@dimen/_20mdp"
+             android:layout_height="@dimen/_20mdp"
+             android:layout_marginStart="@dimen/_6mdp"
+             android:layout_marginTop="@dimen/_16mdp"
+             app:layout_constraintStart_toStartOf="@+id/crv_it_pri"
+             app:layout_constraintTop_toBottomOf="@+id/txt_crd_nom"
+             app:srcCompat="@drawable/ic_maquina" />
+
+         <TextView
+             android:id="@+id/txt_crd_lis_maq"
+             android:layout_width="@dimen/_200mdp"
+             android:layout_height="wrap_content"
+             android:text="Maquinas lista"
+             android:textColor="@color/colorGrisOscuro"
+             android:textSize="16sp"
+             app:layout_constraintEnd_toEndOf="@+id/txt_crd_num"
+             app:layout_constraintStart_toEndOf="@+id/img_it_maq"
+             app:layout_constraintTop_toTopOf="@+id/img_it_maq" />
+
+         <ImageView
+             android:id="@+id/img_it_fall"
+             android:layout_width="@dimen/_16mdp"
+             android:layout_height="@dimen/_16mdp"
+             android:layout_marginTop="@dimen/_12mdp"
+             app:layout_constraintEnd_toEndOf="@+id/img_it_maq"
+             app:layout_constraintStart_toStartOf="@+id/img_it_maq"
+             app:layout_constraintTop_toBottomOf="@+id/txt_crd_lis_maq"
+             app:srcCompat="@drawable/ic_fallo" />
+
+         <com.codesgood.views.JustifiedTextView
+             android:id="@+id/txt_crd_lis_fall"
+             android:layout_width="@dimen/_200mdp"
+             android:layout_height="wrap_content"
+             android:text="Fallo maquina"
+             android:textColor="@color/colorGrisOscuro"
+             android:textSize="16sp"
+             android:layout_marginBottom="@dimen/_18mdp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="@+id/txt_crd_num"
+             app:layout_constraintStart_toEndOf="@+id/img_it_maq"
+             app:layout_constraintTop_toTopOf="@+id/img_it_fall" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

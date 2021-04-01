@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleDiagnostico"
+    android:background="@color/colorBlanco">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_det_dig_atras"
+                        android:layout_width="@dimen/_25mdp"
+                        android:layout_height="@dimen/_20mdp"
+                        android:layout_marginStart="@dimen/_10mdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_atras" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Detalle de tiket"
+                        android:textColor="@color/colorBlanco"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_det_dig_atras"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.378"
+                        app:layout_constraintStart_toEndOf="@+id/img_det_dig_atras"
+                        app:layout_constraintTop_toTopOf="@+id/img_det_dig_atras" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:id="@+id/img_it_maq"
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:layout_marginStart="@dimen/_12mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3"
+                app:srcCompat="@drawable/ic_maquina" />
+
+            <TextView
+                android:id="@+id/txt_det_maq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maquinas"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_12mdp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_it_maq"
+                app:layout_constraintStart_toEndOf="@+id/img_it_maq"
+                app:layout_constraintTop_toTopOf="@+id/img_it_maq" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_det_dia_maq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_it_maq" />
+
+
+            <ImageView
+                android:id="@+id/img_it_fall"
+                android:layout_width="@dimen/_16mdp"
+                android:layout_height="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:layout_marginStart="@dimen/_12mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcv_det_dia_maq"
+                app:srcCompat="@drawable/ic_fallo" />
+
+            <TextView
+                android:id="@+id/txt_det_fallo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:text="Fallo"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/img_it_fall"
+                app:layout_constraintStart_toEndOf="@+id/img_it_fall"
+                app:layout_constraintTop_toTopOf="@+id/img_it_fall" />
+
+            <TextView
+                android:id="@+id/txt_det_dia_fallo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Descripcion del Fallo"
+                android:textSize="16sp"
+                android:textColor="@color/colorNegro"
+                android:layout_marginTop="@dimen/_8mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txt_det_fallo"
+                app:layout_constraintTop_toBottomOf="@+id/img_it_fall" />
+
+
+            <ImageView
+                android:id="@+id/img_it_dia"
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginTop="@dimen/_12mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_det_dia_fallo"
+                app:srcCompat="@drawable/ic_alert" />
+
+            <TextView
+                android:id="@+id/txt_dia_det_fec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:text="Ultima Visita"
+                android:textStyle="italic"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_det_diag"
+                app:layout_constraintStart_toEndOf="@+id/txt_det_diag"
+                app:layout_constraintTop_toTopOf="@+id/txt_det_diag" />
+
+            <TextView
+                android:id="@+id/txt_det_diag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnostico"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_it_dia"
+                app:layout_constraintStart_toEndOf="@+id/img_it_dia"
+                app:layout_constraintTop_toTopOf="@+id/img_it_dia"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <TextView
+                android:id="@+id/txt_det_dia_dia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:text="Descripcion del Fallo"
+                android:textColor="@color/colorNegro"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txt_det_fallo"
+                app:layout_constraintTop_toBottomOf="@+id/img_it_dia" />
+
+
+            <ImageView
+                android:id="@+id/img_it_rep"
+                android:layout_width="@dimen/_28mdp"
+                android:layout_height="@dimen/_28mdp"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:layout_marginStart="@dimen/_12mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_det_dia_dia"
+                app:srcCompat="@drawable/ic_repuestos" />
+
+            <TextView
+                android:id="@+id/txt_uno_rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repuestos usados"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="@dimen/_4mdp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_12mdp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_it_rep"
+                app:layout_constraintStart_toEndOf="@+id/img_it_rep" />
+
+
+            <TextView
+                android:id="@+id/txt_uno_list_rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:text="sin repuestos utilizados"
+                android:textSize="17sp"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintStart_toStartOf="@+id/txt_uno_rep"
+                app:layout_constraintTop_toBottomOf="@+id/txt_uno_rep" />
+
+
+            <ImageView
+                android:id="@+id/img_it_dia_rep"
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginTop="@dimen/_12mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_uno_list_rep"
+                app:srcCompat="@drawable/ic_anexos" />
+
+
+            <TextView
+                android:id="@+id/txt_det_rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anexos"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_it_dia_rep"
+                app:layout_constraintStart_toEndOf="@+id/img_it_dia_rep"
+                app:layout_constraintTop_toTopOf="@+id/img_it_dia_rep"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_dia_det"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="@dimen/_12mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_it_dia_rep"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

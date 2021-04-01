@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_tit_pros_diag_maq_tik"
+        android:layout_width="@dimen/_200mdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="@dimen/_16mdp"
+        android:text="Creando Tiket"
+        android:textAlignment="center"
+        android:textColor="@color/colorNegro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prb_img_new_tik_img"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        app:layout_constraintStart_toStartOf="@+id/txt_tit_pros_diag_maq_tik"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tit_pros_diag_maq_tik" />
+
+
+    <TextView
+        android:id="@+id/txt_new_tik_img"
+        android:layout_width="@dimen/_140mdp"
+        android:layout_height="wrap_content"
+        android:text="Subiendo Imagenes"
+        android:textSize="14sp"
+        android:layout_marginStart="@dimen/_12mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_img_new_tik_img"
+        app:layout_constraintStart_toEndOf="@+id/prb_img_new_tik_img"
+        app:layout_constraintTop_toTopOf="@+id/prb_img_new_tik_img" />
+
+    <ProgressBar
+        android:id="@+id/prb_img_new_tik_tik"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        app:layout_constraintStart_toStartOf="@+id/prb_img_new_tik_img"
+        app:layout_constraintTop_toBottomOf="@+id/prb_img_new_tik_img" />
+
+
+    <TextView
+        android:id="@+id/txt_new_tik_cont"
+        android:layout_width="@dimen/_140mdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12mdp"
+        android:text="Actualizando consecutivo"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_img_new_tik_cont"
+        app:layout_constraintStart_toEndOf="@+id/prb_img_new_tik_img"
+        app:layout_constraintTop_toTopOf="@+id/prb_img_new_tik_cont" />
+
+    <ProgressBar
+        android:id="@+id/prb_img_new_tik_cont"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:layout_marginBottom="@dimen/_32mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/prb_img_new_tik_img"
+        app:layout_constraintTop_toBottomOf="@+id/prb_img_new_tik_tik" />
+
+
+    <TextView
+        android:id="@+id/txt_new_tik_tik"
+        android:layout_width="@dimen/_140mdp"
+        android:layout_height="wrap_content"
+        android:text="Subiendo informacion tiket"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_img_new_tik_tik"
+        app:layout_constraintStart_toStartOf="@+id/txt_new_tik_img"
+        app:layout_constraintTop_toTopOf="@+id/prb_img_new_tik_tik" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
